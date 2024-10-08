@@ -34,7 +34,7 @@ class FedLAMA:
         if self.num_classes == 1:
             self.loss_object = tf.keras.losses.BinaryCrossentropy(from_logits = True)
         else:
-            self.loss_object = tf.keras.losses.CategoricalCrossentropy(label_smoothing = 0.1, from_logits = True)
+            self.loss_object = tf.keras.losses.CategoricalCrossentropy(from_logits = True)
         if self.rank == 0:
             print ("FedLAMA is the optimizer!")
         self.param_types = []
