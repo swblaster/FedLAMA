@@ -1,6 +1,6 @@
 
 # FedLAMA
-This repository is the source code used for all the experiments in the below paper.
+This repository contains the S/W framework used for all the experiments in the below paper.
 '[Sunwoo Lee, Tuo Zhang, and Salman Avestimehr, Layer-wise Adaptive Model Aggregation for Scalable Federated Learning, AAAI, 2023](https://ojs.aaai.org/index.php/AAAI/article/view/26023)'
 
 ## Software Requirements
