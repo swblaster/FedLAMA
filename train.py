@@ -32,7 +32,6 @@ class framework:
         self.warmup_epochs = 0
         self.lr_decay_factor = 10
         self.participations = np.zeros((self.num_clients))
-        self.total_participations = np.zeros((self.num_clients))
         self.sampler = client_sampling.sampling(self.num_clients, self.num_workers, self.num_candidates)
         if self.num_classes == 1:
             self.valid_acc = tf.keras.metrics.BinaryAccuracy()
@@ -146,4 +145,5 @@ class framework:
         for i in range (len(self.checkpoint.models[0].trainable_variables)):
             param = self.checkpoint.models[0].trainable_variables[i]
             param = self.comm.bcast(param, root=0)
-            self.checkpoint.models[0].trainable_variables[i].assign(param)
+            for j in range (self.num_local_workers):
+                self.checkpoint.models[j].trainable_variables[i].assign(param)

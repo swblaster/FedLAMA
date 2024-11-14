@@ -4,7 +4,7 @@ This repository contains the S/W framework used for all the experiments in the b
 '[Sunwoo Lee, Tuo Zhang, and Salman Avestimehr, Layer-wise Adaptive Model Aggregation for Scalable Federated Learning, AAAI, 2023](https://ojs.aaai.org/index.php/AAAI/article/view/26023)'
 
 ## Software Requirements
- * tensorflow2
+ * tensorflow2 (<= 2.15.1)
  * tensorflow_datasets
  * python3
  * mpi4py

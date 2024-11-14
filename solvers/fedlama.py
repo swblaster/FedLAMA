@@ -15,6 +15,8 @@ class FedLAMA:
         self.num_local_workers = num_workers // self.size
         self.average_interval = average_interval
         self.phi = phi
+
+        # TensorFlow requires one model to be trained with a dedicated optimizer.
         self.local_optimizers = []
         for i in range (self.num_local_workers):
             self.local_optimizers.append(SGD(momentum = 0.9))
